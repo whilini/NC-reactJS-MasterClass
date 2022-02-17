@@ -14,12 +14,38 @@ const Circle = styled(Box)`
   border-radius: 50px;
 `;
 
+const Btn = styled.button`
+  color: whitesmoke;
+  background-color: darkgray;
+  border: 0;
+  border-radius: 15px;
+`;
+
+const Input = styled.input.attrs({ required: true })`
+  background-color: paleturquoise;
+`;
+
 const App = () => {
   return (
-    <Father>
-      <Circle bgColor='powderblue' />
-      <Box bgColor='teal' />
-    </Father>
+    <div>
+      <Father as='header'>
+        <Circle bgColor='powderblue' />
+        <Box bgColor='teal' />
+      </Father>
+      <div>
+        <Btn>Log in</Btn>
+        <Btn as='a' href='/'>
+          Log in
+        </Btn>
+
+        <div>
+          <Input />
+          <Input />
+          <Input />
+          <Input />
+        </div>
+      </div>
+    </div>
   );
 };
 
